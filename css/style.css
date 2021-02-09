@@ -1,0 +1,305 @@
+/* Variables */
+
+:root {
+    --basic-red: #FB565A;
+    --middle-red: #E74246;
+    --dark-red: #D7373B;
+    --basic-green: #00CA74;
+    --middle-green: #00BC6C;
+    --dark-green: #00AA62;
+    --basic-gray: #EEEEEE;
+    --middle-gray: #DFDFDF;
+    --dark-gray: #D5D5D5;
+    --basic-gray-border: #D7DCDE;
+    --dark-gray-border: #B4B9BB;
+    --basic-yellow: #EFC849;
+    --middle-yellow: #EAB534;
+    --dark-yellow: #E5A722;
+    --basic-black: #000000;
+    --basic-white: #ffffff;
+    }
+/* шрифт робото, похоже, не подтянулся, я не понял, как это сделать правильно, цифры точно н такиеЮ как в фигме*/
+
+/* как сделать смену прозрачности свг элементов при наведении и клике, я не разобрался ( логотип и кнопки-ссылки) */
+
+
+/* Global */
+
+    body {
+      min-width: 960px;
+      margin: 0;
+      padding: 0;
+      font-family: "PT Roboto", Arial, sans-serif;
+      font-size: 16px;
+      /* не понимаю, какое значение выбрать для лайн-хайт */
+      line-height: 24px;
+      font-weight: 400;
+      color: var(--basic-black);
+      background-color: var(--basic-white);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Main navigation */
+    /* как сделать функциональный слайдер я не смог понять */
+
+.main-navigation {
+  font-size: 16px;
+  line-height: 30px; /* ? */
+  color: var(--basic-black);
+  background-color :var(--basic-gray);
+}
+
+.site-navigation {
+  list-style: none;
+  background-color: var(--basic-gray);
+}
+/* сделал выше, как в барбершопе по аналогии, но не уверен. надо ли, короче: делал только то что понимаю в основном */
+
+/* Slider */
+
+.slider-main {
+  background-color :var(--basic-gray);
+}
+
+.slider {
+  list-style-type: none;
+}
+
+
+.slider-text-big {
+font-style: normal;
+font-weight: 500;
+font-size: 55px;
+line-height: 55px;
+}
+
+.slider-text-small {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button-slider-button {
+  width: 240px;
+  height: 50px;
+  border-radius: 3px;
+  background: var(--basic-red);
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--basic-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* services */
+
+.services-list {
+  list-style-type: none;
+}
+
+.services-title {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.services-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+/* как вставить три стмволические картинки, если они не в контектсте хтмл. я не понял ( увы */
+
+.services-button-red {
+  width: 160px;
+  height: 50px;
+  background: var(--basic-red);
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--basic-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-button-green {
+  width: 160px;
+  height: 50px;
+  background: var(--basic-green);
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--basic-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+.services-button-yellow {
+  width: 160px;
+  height: 50px;
+  background: var(--basic-yellow);
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--basic-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About */
+
+.about-who {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.about-principles {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.abouts-work {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.about-direction-work {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.about-since {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.about-promise {
+  list-style-type: none;
+  }
+
+.about-promise-percent {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 64px;
+}
+
+.about-promise-text {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* Projects */
+
+.projects {
+  list-style-type: none;
+}
+
+/* как заставить картинки менять насыщенность я не понял. Как полоски свгшные поставить рядом с картинками я тоже не понял */
+
+
+/* Footer */
+.address-title {
+font-weight: bold;
+font-size: 18px;
+line-height: 30px;
+text-transform: uppercase;
+}
+
+.address-detal {
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+}
+
+.address-button {
+  width: 219px;
+  height: 50px;
+  background: var(--basic-red);
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.offer-benefit {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.offer-benefit-friends {
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+}
+
+.social-list {
+  list-style-type: none;
+}
+
+/* Modal */
+
+.modal-title {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 53px;
+}
+
+.modal-name {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.modal-mail {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.modal-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.modal-send-button {
+  width: 259px;
+  height: 50px;
+  background: var(--basic-red);
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Детальнее я с модальным окном не разобрался */
+
