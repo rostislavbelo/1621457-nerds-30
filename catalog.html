@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Нёрдс</title>
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="favicon/180.png">
-  <link rel="manifest" href="manifest.webmanifest">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="index.html">
-        <img src="img/nerds-logo.png" width="159,87" height="65,02" alt="Логотип студии «Нёрдс»">
-      </a>
-      <ul>
-        <li>
-          <a href="blank.html">Студия</a>
-        </li>
-        <li>
-          <a href="blank.html">Клиенты</a>
-        </li>
-        <li>
-          <a href="#">Магазин</a>
-        </li>
-        <li>
-          <a href="blank.html">Контакты</a>
-        </li>
-      </ul>
-      <a href="blank.html">Корзина</a>
-    </nav>
-    <h1>Магазин готовых шаблонов</h1>
-  </header>
+  <body class="page-body">
+    <header class="main-header">
+      <div class="main-header__container">
+        <a class="anchor main-header-logo" href="index.html">
+          <img class="picture" src="img/nerds-logo.png" width="160" height="65" alt="Логотип студии «Нёрдс»">
+        </a>
+        <nav class="main-navigation">
+          <ul class="site-navigation">
+            <li class="site-navigation__item">
+              <a class="anchor site-navigation__link site-navigation__link--active" href="blank.html">Студия</a>
+            </li>
+            <li class="site-navigation__item">
+              <a class="anchor site-navigation__link" href="blank.html">Клиенты</a>
+            </li>
+            <li class="site-navigation__item">
+              <a class="anchor site-navigation__link" href="catalog.html">Магазин</a>
+            </li>
+            <li class="site-navigation__item">
+              <a class="anchor site-navigation__link" href="blank.html">Контакты</a>
+            </li>
+          </ul>
+          <a class="anchor cart" href="blank.html">Корзина</a>
+        </nav>
+      </div>
+    </header>
   <main>
     <h2 class="visually-hidden">Каталог студии Нёрдс</h2>
+    <h1 class="title-shop">Магазин готовых шаблонов</h1>
     <section>
       <h3 class="visually-hidden">Фильтр шаблонов</h3>
       <p>Стоимость:</p>
@@ -116,53 +121,40 @@
       <button type="#">Следующая</button>
     </section>
   </main>
-  <footer>
-    <section>
-      <img src="img\map 1.jpg" width="1440" height="416" alt="Фрагмент карты города">
+
+  <footer class="page-footer main-footer">
+    <div class="footer-container">
+    <section class="contacts">
+      <img class="picture img-map" src="img\map 1.jpg" width="1440" height="416" alt="Фрагмент карты города">
       <h4 class="visually-hidden">Как нас найти</h4>
-      <div>
-        <p>NЁRDS DESIGN STUDIO</p>
-        <p>
+        <div class="address">
+        <p class="address-title">NЁRDS DESIGN STUDIO</p>
+        <p class="address-detal">
           191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>
-          тел. <a href="tel:+8122757575">+7 (812) 275-75-75</a>
+          тел. <a class="anchor phone" href="tel:+8122757575">+7 (812) 275-75-75</a>
         </p>
-        <a href="blank.html">Напишите нам</a>
+        <a class="anchor address-button" href="blank.html">Напишите нам</a>
       </div>
     </section>
-
-    <section>
+    <section class="social">
       <h4 class="visually-hidden">Мы в социальных сетях</h4>
-      <ul>
+      <ul class="social-list">
         <li>
-          <a href="#">Вконтакте</a>
+          <a class="anchor social-button" href="#">Вконтакте</a>
         </li>
         <li>
-          <a href="#">Фейсбук</a>
+          <a class="anchor social-button" href="#">Фейсбук</a>
         </li>
         <li>
-          <a href="#">Инстаграм</a>
+          <a class="anchor social-button" href="#">Инстаграм</a>
         </li>
       </ul>
-      <div>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+      <div class="offer">
+        <p class="offer-benefit">Давайте дружить, это выгодно!</p>
+        <p class="offer-benefit-friends">Скидка 10% для друзей из социальных сетей.</p>
+    </div>
+    </div>
     </section>
   </footer>
-  <div>
-    <h4 class="visually-hidden">Обратная связь</h4>
-    <p>Напишите нам</p>
-    <p>Ваше имя:</p>
-    <p>Ваш email:</p>
-    <p>Текст письма:</p>
-    <form action="#" method="post">
-      <input type="text" placeholder="Имя Фамилия" required>
-      <input type="email" placeholder="email@example.com">
-      <input type="text" placeholder="В свободной форме" required>
-      <button type="submit">Отправить</button>
-    </form>
-  </div>
 </body>
-</body>
-
 </html>

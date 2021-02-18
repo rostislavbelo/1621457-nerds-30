@@ -1,84 +1,165 @@
 /* Variables */
 
 :root {
-    --basic-red: #FB565A;
-    --middle-red: #E74246;
-    --dark-red: #D7373B;
-    --basic-green: #00CA74;
-    --middle-green: #00BC6C;
-    --dark-green: #00AA62;
-    --basic-gray: #EEEEEE;
-    --middle-gray: #DFDFDF;
-    --dark-gray: #D5D5D5;
-    --basic-gray-border: #D7DCDE;
-    --dark-gray-border: #B4B9BB;
-    --basic-yellow: #EFC849;
-    --middle-yellow: #EAB534;
-    --dark-yellow: #E5A722;
-    --basic-black: #000000;
-    --basic-white: #ffffff;
-    }
-/* шрифт робото, похоже, не подтянулся, я не понял, как это сделать правильно, цифры точно н такиеЮ как в фигме*/
+  --basic-red: #fb565a;
+  --middle-red: #e74246;
+  --dark-red: #d7373b;
+  --basic-green: #00ca74;
+  --middle-green: #00bc6c;
+  --dark-green: #00aa62;
+  --basic-gray: #eeeeee;
+  --middle-gray: #dfdfdf;
+  --dark-gray: #d5d5d5;
+  --basic-gray-border: #d7dcde;
+  --dark-gray-border: #b4b9bb;
+  --basic-yellow: #efc849;
+  --middle-yellow: #eab534;
+  --dark-yellow: #e5a722;
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --additional1-gray: #444444;
+  --additional2-gray: #666666;
+}
 
 /* как сделать смену прозрачности свг элементов при наведении и клике, я не разобрался ( логотип и кнопки-ссылки) */
 
-
 /* Global */
 
-    body {
-      min-width: 960px;
-      margin: 0;
-      padding: 0;
-      font-family: "PT Roboto", Arial, sans-serif;
-      font-size: 16px;
-      /* не понимаю, какое значение выбрать для лайн-хайт */
-      line-height: 24px;
-      font-weight: 400;
-      color: var(--basic-black);
-      background-color: var(--basic-white);
-    }
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  /* не понимаю, какое значение выбрать для лайн-хайт */
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+.anchor {
+  text-decoration: none;
+  text-transform: uppercase;
+  top: -26px;
+}
 
-    a {
-      text-decoration: none;
-    }
+.picture {
+  max-width: 100%;
+  height: auto;
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
-    /* Main navigation */
-    /* как сделать функциональный слайдер я не смог понять */
+/* Main navigation */
+/* как сделать функциональный слайдер я не смог понять */
+.main-header {
+  position: relative;
+  background-color: var(--basic-gray);
+  padding-top: 74px;
+  padding-bottom: 74px;
+}
+
+.main-header__container {
+  width: 1157px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-header-logo {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -27px;
+}
 
 .main-navigation {
   font-size: 16px;
   line-height: 30px; /* ? */
   color: var(--basic-black);
-  background-color :var(--basic-gray);
+  padding-left: 360px;
+  padding-right: 360px;
+  position: relative;
 }
 
 .site-navigation {
   list-style: none;
-  background-color: var(--basic-gray);
+  padding: 0;
+  margin-top: -9px;
+  /*display: flex;
+  margin-left: -30px;*/
+  display: grid;
+  grid-template-columns: 69px 82px 81px 69px;
+  gap: 40px;
 }
+
+.site-navigation__item {
+  /*margin-left: 30px;*/
+}
+
+.site-navigation__link {
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.cart {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
 /* сделал выше, как в барбершопе по аналогии, но не уверен. надо ли, короче: делал только то что понимаю в основном */
 
 /* Slider */
 
 .slider-main {
-  background-color :var(--basic-gray);
+  background-color: var(--basic-gray);
+}
+
+.slider-container {
+  width: 1157px;
+  min-height: 352px;
+  margin: 0 auto;
 }
 
 .slider {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
+.slider-screen {
+  display: none;
+}
+
+.slider-screen--active {
+  display: block;
+}
 
 .slider-text-big {
-font-style: normal;
-font-weight: 500;
-font-size: 55px;
-line-height: 55px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  padding: 0;
+  margin-top: -2px;
+  margin-left: -1px;
 }
 
 .slider-text-small {
@@ -86,6 +167,8 @@ line-height: 55px;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
+  padding: 0;
+  margin-top: -29px;
 }
 
 .button-slider-button {
@@ -100,17 +183,32 @@ line-height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
 }
 
-/* services */
+/* Services */
+
+.services-container {
+  width: 1157px;
+  margin: 0 auto;
+}
 
 .services-list {
   list-style-type: none;
+  list-style: none;
+  padding: 0;
+  margin-top: -9px;
+  /*display: flex;
+  margin-left: -30px;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .services-title {
   font-size: 24px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .services-text {
@@ -119,7 +217,7 @@ line-height: 55px;
 }
 /* как вставить три стмволические картинки, если они не в контектсте хтмл. я не понял ( увы */
 
-.services-button-red {
+.services-button-sites {
   width: 160px;
   height: 50px;
   background: var(--basic-red);
@@ -133,7 +231,7 @@ line-height: 55px;
   justify-content: center;
 }
 
-.services-button-green {
+.services-button-soft {
   width: 160px;
   height: 50px;
   background: var(--basic-green);
@@ -145,9 +243,9 @@ line-height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  }
+}
 
-.services-button-yellow {
+.services-button-presentations {
   width: 160px;
   height: 50px;
   background: var(--basic-yellow);
@@ -162,6 +260,14 @@ line-height: 55px;
 }
 
 /* About */
+
+.about-container {
+  width: 1157px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0;
+}
 
 .about-who {
   font-weight: 500;
@@ -184,6 +290,18 @@ line-height: 55px;
 .about-direction-work {
   font-size: 16px;
   line-height: 24px;
+  list-style-type: none;
+}
+
+.about-progress {
+  margin: 0 auto;
+  grid-column: 2 / 3;
+}
+
+.about-promise-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
 }
 
 .about-since {
@@ -191,10 +309,15 @@ line-height: 55px;
   line-height: 24px;
   font-weight: bold;
   text-transform: uppercase;
+  margin-top: 140px;
+  margin-left: 40px;
 }
+
 .about-promise {
   list-style-type: none;
-  }
+  padding: 0;
+  margin: 0;
+}
 
 .about-promise-percent {
   font-weight: bold;
@@ -209,25 +332,50 @@ line-height: 55px;
 
 /* Projects */
 
-.projects {
-  list-style-type: none;
+.projects-container {
+  width: 1157px;
+  margin: 0 auto;
 }
 
-/* как заставить картинки менять насыщенность я не понял. Как полоски свгшные поставить рядом с картинками я тоже не понял */
-
+.projects {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
 
 /* Footer */
+
+/* не понял, как сделать карту во всю ширмну и по центру */
+
+.footer-container {
+  width: 1157px;
+  margin: 0 auto;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+ .social-list {
+  list-style-type: none;
+  display: grid;
+  grid-column: 1fr 1fr 1fr ; /* не понимаю, почему соцсети не встали в строчку. не понял видать, как грид внутри грида делать */
+}
+
 .address-title {
-font-weight: bold;
-font-size: 18px;
-line-height: 30px;
-text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .address-detal {
   font-size: 16px;
   line-height: 18px;
-  color: #666666;
+  color: var(--additional2-gray);
 }
 
 .address-button {
@@ -254,11 +402,7 @@ text-transform: uppercase;
 .offer-benefit-friends {
   font-size: 16px;
   line-height: 22px;
-  color: #444444;
-}
-
-.social-list {
-  list-style-type: none;
+  color: var(--additional1-gray);
 }
 
 /* Modal */
@@ -301,5 +445,22 @@ text-transform: uppercase;
   align-items: center;
   justify-content: center;
 }
-/* Детальнее я с модальным окном не разобрался */
+/* Детально я с модальным окном не разобрался */
+
+/* Catalog Page */
+
+.title-shop {
+font-style: normal;
+font-weight: 500;
+font-size: 55px;
+line-height: 55px;
+display: flex;
+align-items: center;
+background-color: var(--basic-gray);
+min-height: 200px;
+margin: 0 auto;
+display: block;
+text-align: center;
+}
+
 
