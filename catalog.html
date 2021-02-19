@@ -36,42 +36,43 @@
           </ul>
           <a class="anchor cart" href="blank.html">Корзина</a>
         </nav>
+        <h1 class="title-shop">Магазин готовых шаблонов</h1>
       </div>
     </header>
-  <main>
+  <main class="main-catalog">
     <h2 class="visually-hidden">Каталог студии Нёрдс</h2>
-    <h1 class="title-shop">Магазин готовых шаблонов</h1>
-    <section>
+    <div class="big-grid">
+    <section class="filtres-total">
       <h3 class="visually-hidden">Фильтр шаблонов</h3>
-      <p>Стоимость:</p>
+      <p class="price">Стоимость:</p>
       <meter value="10000" max="15000" title="#"></meter>
-      <p>От</p>
-      <p>До</p>
+      <p class="limit">От</p>
+      <p class="limit">До</p>
       <form action="#" method="#">
         <input type="data" placeholder="0" required>
         <input type="data" placeholder="15000">
       </form>
       <form method="get" action="#">
         <fieldset>
-          <legend>Сетка:</legend>
-          <ul>
+          <legend class="grid-type">Ceтка:</legend>
+          <ul class="grid-type-radio">
             <li>
               <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
-              <label for="filter-adaptive">Адаптивная</label>
+              <label class="filter-adaptive">Адаптивная</label>
             </li>
             <li>
               <input type="radio" name="grid" value="fixed" id="filter-fixed">
-              <label for="filter-fixed">Фиксированная</label>
+              <label class="filter-fixed">Фиксированная</label>
             </li>
             <li>
               <input type="radio" name="grid" value="rubber" id="filter-rubber">
-              <label for="filter-rubber">Резиновая</label>
+              <label class="filter-rubber">Резиновая</label>
             </li>
           </ul>
         </fieldset>
         <fieldset>
-          <legend>Особенности:</legend>
-          <ul>
+          <legend class="specific-title">Особенности:</legend>
+          <ul class="specifics">
             <li>
               <input type="checkbox" name="slider" id="filter-slider" checked>
               <label for="filter-slider">Слайдер</label>
@@ -94,38 +95,44 @@
             </li>
             <ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="button-show" type="submit">Показать</button>
       </form>
     </section>
-    <section>
+    <section class="products">
       <h3 class="visually-hidden">Сортировка шаблонов</h3>
-      <p>Сортировать:</p>
-      <ul>
-        <li>По цене</li>
-        <li>По типу</li>
-        <li>По названию</li>
+      <p class="sort-title">Сортировать:</p>
+      <ul class="sort-type-main">
+        <li class="sort-price">По цене</li>
+        <li class="sort-type">По типу</li>
+        <li class="sort-name">По названию</li>
       </ul>
-      <ul>
-        <li>Шаблон Sedona</li>
-        <li>Шаблон Pink</li>
-        <li>Шаблон Бородински</li>
-        <li>Шаблон Mishka</li>
-        <li>Шаблон A+</li>
-        <li>Шаблон Кваст</li>
+      <ul class="showcase-left">
+        <li class="template1">Шаблон Sedona</li>
+        <li class="template3">Шаблон Бородински</li>
+        <li class="template5">Шаблон A+</li>
       </ul>
-      <ul>
+      <ul class="showcase-right">
+        <li class="template2">Шаблон Pink</li>
+        <li class="template4">Шаблон Mishka</li>
+        <li class="template6">Шаблон Квас</li>
+      </ul>
+      <!-- строки 109-117 - разбивка катрочек товаров на 2 колонки.
+      Не знаю, допустимо ли так дробить список в угоду сетке -->
+
+      <ul class="pages-list">
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ul>
-      <button type="#">Следующая</button>
+      <button class="next-page" type="#">Следующая</button>
     </section>
+    </div>
   </main>
 
   <footer class="page-footer main-footer">
     <div class="footer-container">
+      <img class="picture img-map" src="img\map 1.jpg" width="1440px" height="416px" alt="Фрагмент карты города">
     <section class="contacts">
-      <img class="picture img-map" src="img\map 1.jpg" width="1440" height="416" alt="Фрагмент карты города">
       <h4 class="visually-hidden">Как нас найти</h4>
         <div class="address">
         <p class="address-title">NЁRDS DESIGN STUDIO</p>

@@ -19,14 +19,16 @@
   --basic-white: #ffffff;
   --additional1-gray: #444444;
   --additional2-gray: #666666;
+  --additional-black: #283136;
 }
 
 /* как сделать смену прозрачности свг элементов при наведении и клике, я не разобрался ( логотип и кнопки-ссылки) */
 
 /* Global */
 
-body {
+.page-body {
   min-width: 960px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -41,11 +43,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   top: -26px;
-}
-
-.picture {
-  max-width: 100%;
-  height: auto;
 }
 
 .visually-hidden {
@@ -103,9 +100,8 @@ body {
   gap: 40px;
 }
 
-.site-navigation__item {
-  /*margin-left: 30px;*/
-}
+/*.site-navigation__item {
+  margin-left: 30px;}*/
 
 .site-navigation__link {
   font-size: 16px;
@@ -353,17 +349,22 @@ body {
   margin: 0 auto;
 }
 
+.picture .img-map {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .social {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-}
+  }
 
- .social-list {
+.social-list {
   list-style-type: none;
   display: grid;
-  grid-column: 1fr 1fr 1fr ; /* не понимаю, почему соцсети не встали в строчку. не понял видать, как грид внутри грида делать */
-}
+  grid-column: 1fr 1fr 1fr; /* не понимаю, почему соцсети не встали в строчку. не понял видать, как грид внутри грида делать */
+  }
 
 .address-title {
   font-weight: bold;
@@ -449,18 +450,174 @@ body {
 
 /* Catalog Page */
 
-.title-shop {
-font-style: normal;
-font-weight: 500;
-font-size: 55px;
-line-height: 55px;
-display: flex;
-align-items: center;
-background-color: var(--basic-gray);
-min-height: 200px;
-margin: 0 auto;
-display: block;
-text-align: center;
+.main-catalog {
+  width: 1157px;
+  margin: 0 auto;
 }
 
+.big-grid {
+  display: grid;
+  grid-template-areas: "filtres products";
+  grid-template-columns: 260px 1fr;
+  gap: 50px;
+}
 
+.filtres-total {
+  grid-area: filtres;
+}
+
+.products {
+  grid-area: products;
+  display: grid;
+  grid-template-areas:
+    "sort-title sort-types"
+    "product-left product-right"
+    "pages-list1 pages-list2";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  gap: 10px;
+}
+
+.sort-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  grid-area: sort-title;
+}
+
+.sort-type-main {
+  list-style-type: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-transform: uppercase;
+  grid-area: sort-types;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pages-list {
+  list-style-type: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  grid-area: pages-list1;
+}
+
+.title-shop {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  background-color: var(--basic-gray);
+  min-height: 50px;
+  /* margin: 0 auto; */
+  margin-top: 100px;
+  display: block;
+  text-align: center;
+}
+
+.price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.grid-type {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: left;
+
+}
+
+.grid-type-radio {
+  list-style-type: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--additional-black);
+  text-align: left;
+
+}
+
+.specific-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.specifics {
+  list-style-type: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.limit {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.button-show {
+  width: 260px;
+  height: 50px;
+  border-radius: 3px;
+  background: var(--basic-gray);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 140px;
+}
+
+.next-page {
+  width: 260px;
+  height: 50px;
+  background: var(--basic-gray);
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+  grid-area: pages-list2;
+}
+
+.showcase-right {
+  grid-area: product-right;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.showcase-left {
+  grid-area: product-left;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* строки 610 - 622 - (строки 109-117 в html) - разбивка катрочек товаров на 2 колонки.
+Не знаю, допустимо ли так дробить список в угоду сетке */
