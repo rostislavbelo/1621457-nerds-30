@@ -42,7 +42,6 @@
 .anchor {
   text-decoration: none;
   text-transform: uppercase;
-  top: -26px;
 }
 
 .visually-hidden {
@@ -142,6 +141,7 @@
 
 .slider-screen {
   display: none;
+  position: relative;
 }
 
 .slider-screen--active {
@@ -182,11 +182,76 @@
   margin-top: 40px;
 }
 
+.slider-screen::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+}
+.slider-screen::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 760px;
+  height: 431px;
+  right: 0;
+  top: 102px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-screen--1::after {
+  background-image: url("../img/nerds-index-slide1_1.png");
+}
+
+.slide-screen--2::after {
+  background-image: url("../img/nerds-index-slide2_1.png");
+}
+
+.slide-screen--3::after {
+  background-image: url("../img/nerds-index-slide3_1.png");
+}
+
 /* Services */
 
 .services-container {
   width: 1157px;
   margin: 0 auto;
+}
+
+.services-images {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.services-web {
+  padding: 0;
+  margin: 30px 0;
+  display: block;
+  content: url("../img/illustration-1_1.png");
+  width: 300px;
+  height: 146px;
+}
+
+.services-soft {
+  padding: 0;
+  margin: 30px 0;
+  display: block;
+  content: url("../img/illustration-2_1.png");
+  width: 300px;
+  height: 146px;
+}
+
+.services-presentation {
+  padding: 0;
+  margin: 30px 0;
+  display: block;
+  content: url("../img/illustration-3_1.png");
+  width: 300px;
+  height: 146px;
 }
 
 .services-list {
@@ -344,36 +409,128 @@
 
 /* не понял, как сделать карту во всю ширмну и по центру */
 
-.footer-container {
+/* .footer-container {
   width: 1157px;
   margin: 0 auto;
+} */
+
+.contacts {
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 37px;
+  min-height: 325px;
+  overflow: hidden;
+  margin-bottom: 67px;
 }
 
-.picture .img-map {
+.img-map {
   width: 100%;
-  margin: 0 auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .social {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 33% auto;
   gap: 20px;
-  }
+  width: 1157px;
+  margin: 0 auto 50px;
+}
 
 .social-list {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
   display: grid;
-  grid-column: 1fr 1fr 1fr; /* не понимаю, почему соцсети не встали в строчку. не понял видать, как грид внутри грида делать */
-  }
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 267px;
+}
+
+.social-button {
+  display: block;
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  position: relative;
+}
+
+.social-button:hover {
+  background-color: var(--middle-red);
+}
+
+.social-button::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-button:active::after {
+  opacity: 0.5;
+}
+
+.social-button:focus {
+  outline: none;
+  background-color: var(--dark-red);
+}
+
+.social-button--vk::after {
+  background: url("../img/soc/vk-icon.svg") no-repeat top left;
+  width: 26px;
+  height: 15px;
+}
+
+.social-button--fb::after {
+  background: url("../img/soc/fb-icon.svg") no-repeat top left;
+  width: 12px;
+  height: 22px;
+}
+
+.social-button--inst::after {
+  background: url("../img/soc/insta-icon.svg") no-repeat top left;
+  width: 21px;
+  height: 21px;
+}
+
+.address {
+  position: relative;
+  z-index: 10;
+  background-color: white;
+  width: 219px;
+  left: 50%;
+  transform: translateX(-580px);
+  padding: 50px 50px 46px;
+}
 
 .address-title {
+  padding: 0;
+  margin: 0 0 22px;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.address-detal {
+.address-tel {
+  margin: 0 0 36px;
+  padding: 0;
+}
+
+.phone {
+  text-decoration: none;
+}
+
+.address-detail {
+  padding: 0;
+  margin: 0 0 15px;
   font-size: 16px;
   line-height: 18px;
   color: var(--additional2-gray);
@@ -395,18 +552,25 @@
 }
 
 .offer-benefit {
+  padding: 0;
+  margin: 0;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
 }
 
 .offer-benefit-friends {
+  padding: 0;
+  margin: 0;
   font-size: 16px;
   line-height: 22px;
   color: var(--additional1-gray);
 }
 
 /* Modal */
+.modal {
+  display: none;
+}
 
 .modal-title {
   font-weight: bold;
@@ -530,6 +694,12 @@
   text-transform: uppercase;
 }
 
+.grid-type-main {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 .grid-type {
   font-style: normal;
   font-weight: bold;
@@ -537,7 +707,6 @@
   line-height: 30px;
   text-transform: uppercase;
   text-align: left;
-
 }
 
 .grid-type-radio {
@@ -548,7 +717,14 @@
   line-height: 20px;
   color: var(--additional-black);
   text-align: left;
+  padding: 0;
+  margin: 0;
+}
 
+.specific-main {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 .specific-title {
@@ -565,6 +741,8 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .limit {

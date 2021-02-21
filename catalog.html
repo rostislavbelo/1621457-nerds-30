@@ -53,7 +53,7 @@
         <input type="data" placeholder="15000">
       </form>
       <form method="get" action="#">
-        <fieldset>
+        <fieldset class="grid-type-main">
           <legend class="grid-type">Ceтка:</legend>
           <ul class="grid-type-radio">
             <li>
@@ -70,7 +70,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="specific-main">
           <legend class="specific-title">Особенности:</legend>
           <ul class="specifics">
             <li>
@@ -130,38 +130,52 @@
   </main>
 
   <footer class="page-footer main-footer">
-    <div class="footer-container">
-      <img class="picture img-map" src="img\map 1.jpg" width="1440px" height="416px" alt="Фрагмент карты города">
     <section class="contacts">
-      <h4 class="visually-hidden">Как нас найти</h4>
-        <div class="address">
-        <p class="address-title">NЁRDS DESIGN STUDIO</p>
-        <p class="address-detal">
-          191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>
-          тел. <a class="anchor phone" href="tel:+8122757575">+7 (812) 275-75-75</a>
-        </p>
-        <a class="anchor address-button" href="blank.html">Напишите нам</a>
-      </div>
-    </section>
-    <section class="social">
-      <h4 class="visually-hidden">Мы в социальных сетях</h4>
-      <ul class="social-list">
-        <li>
-          <a class="anchor social-button" href="#">Вконтакте</a>
-        </li>
-        <li>
-          <a class="anchor social-button" href="#">Фейсбук</a>
-        </li>
-        <li>
-          <a class="anchor social-button" href="#">Инстаграм</a>
-        </li>
-      </ul>
-      <div class="offer">
-        <p class="offer-benefit">Давайте дружить, это выгодно!</p>
-        <p class="offer-benefit-friends">Скидка 10% для друзей из социальных сетей.</p>
+    <img class="picture img-map" src="img\map 1.jpg" width="1440" height="416" alt="Фрагмент карты города">
+    <h4 class="visually-hidden">Как нас найти</h4>
+      <div class="address">
+      <p class="address-title">NЁRDS DESIGN STUDIO</p>
+      <p class="address-detail">
+        191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+        <p class="address-tel">тел. <a class="phone" href="tel:+8122757575">+7 (812) 275-75-75</a>
+      </p>
+      <a class="anchor address-button" href="blank.html">Напишите нам</a>
     </div>
-    </div>
-    </section>
-  </footer>
+  </section>
+  <section class="social">
+    <h4 class="visually-hidden">Мы в социальных сетях</h4>
+    <ul class="social-list">
+      <li class="social-item">
+        <a class="social-button social-button--vk" href="#" aria-label="ВКонтакте"></a>
+      </li>
+      <li class="social-item">
+          <a class="social-button social-button--fb" href="#" aria-label="Фейсбук"></a>
+      </li>
+      <li class="social-item">
+        <a class="social-button social-button--inst" href="#" aria-label="Инстаграм"></a>
+      </li>
+    </ul>
+    <div class="offer">
+      <p class="offer-benefit">Давайте дружить, это выгодно!</p>
+      <p class="offer-benefit-friends">Скидка 10% для друзей из социальных сетей.</p>
+  </div>
+  </section>
+</footer>
+
+<div class="modal">
+  <h4 class="visually-hidden">Обратная связь</h4>
+  <p class="modal-title">Напишите нам</p>
+  <p class="modal-name">Ваше имя:</p>
+  <p class="modal-mail">Ваш email:</p>
+  <p class="modal-text">Текст письма:</p>
+  <p>Текст письма:</p>
+  <form class="modal-input" action="#" method="post">
+    <input class="modal-input-name" type="text" placeholder="Имя Фамилия" required>
+    <input class="modal-input-mail" type="email" placeholder="email@example.com">
+    <input class="modal-input-text" type="text" placeholder="В свободной форме" required>
+    <button class="modal-send-button" type="submit">Отправить</button>
+  </form>
+</div>
 </body>
+
 </html>
