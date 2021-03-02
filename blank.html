@@ -60,7 +60,7 @@
           <p class="address-tel">
             тел. <a class="phone" href="tel:+8122757575">+7 (812) 275-75-75</a>
           </p>
-          <a class="anchor address-button" href="blank.html">Напишите нам</a>
+          <a class="address-button" href="blank.html">Напишите нам</a>
         </div>
       </section>
       <section class="social">
@@ -96,25 +96,26 @@
         </div>
       </section>
     </footer>
-    <div class="modal">
-      <section class="feedback">
-        <h4 class="visually-hidden">Обратная связь</h4>
-        <h2 class="appointment-title">Напишите нам</h2>
-        <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="appointment-item appointment-item-name">
-            <label for="appointment-name">Ваше имя:</label>
-            <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
-          </p>
-          <p class="appointment-item appointment-item-email">
-            <label for="appointment-email">Ваш email:</label>
-            <input id="appointment-email" type="text" name="email" placeholder="email@example.com ">
-          </p>
-          <p class="appointment-item appointment-item-text">
-            <label for="appointment-text">Текст письма:</label>
-            <input id="appointment-text" type="text" name="text" placeholder="В свободной форме">
-          </p>
-          <button class="button button-modal" type="submit">Отправить</button>
-        </form>
-      </section>
-    </div>
+    <section class="modal modal--feedback">
+      <h4 class="visually-hidden">Обратная связь</h4>
+      <h2 class="appointment-title">Напишите нам</h2>
+      <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="appointment-item appointment-item-name">
+          <label for="appointment-name">Ваше имя:</label>
+          <input class="appointment-input"  id="appointment-name" type="text" name="name" placeholder="Имя Фамилия" required>
+        </p>
+        <p class="appointment-item appointment-item-email">
+          <label for="appointment-email">Ваш email:</label>
+          <input class="appointment-input" id="appointment-email" type="text" name="email" placeholder="email@example.com ">
+        </p>
+        <p class="appointment-item appointment-item-text">
+          <label for="appointment-text">Текст письма:</label>
+          <textarea class="appointment-text" name="text" id="appointment-text" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button button-modal" type="submit">Отправить</button>
+      </form>
+      <a class="modal-closure" href="#" aria-label="Закрыть форму обратной связи"></a>
+  </section>
+  </body>
+  <script src="./js/script.js"></script>
   </body>
