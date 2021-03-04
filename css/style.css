@@ -767,7 +767,13 @@
   position: relative;
 }
 
-/* .projects-img2 {
+/* .projects-img1 {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.projects-img2 {
   padding: 0;
   margin: 0;
   display: block;
@@ -783,10 +789,6 @@
   padding: 0;
   margin: 0;
   display: block;
-} */
-
-/* .projects-img:nth-child(2) {
-  border-right: 2px solid var(--basic-gray);
 } */
 
 .projects-img:nth-child(2n)::after,
@@ -934,7 +936,7 @@
 
 .address-title {
   padding: 0;
-  margin: 0 0 22px;
+  margin: 0 0 23px;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
@@ -958,7 +960,7 @@
 
 .address-detail {
   padding: 0;
-  margin: 0 0 15px;
+  margin-bottom: 19px;
   font-size: 16px;
   line-height: 18px;
   color: var(--additional2-gray);
@@ -993,7 +995,7 @@
 }
 
 .offer-benefit {
-  padding: 0;
+  padding: 7px 0 11px;
   margin: 0;
   font-weight: bold;
   font-size: 36px;
@@ -1329,6 +1331,7 @@
   text-align: center;
   border: none;
   margin-left: 5px;
+  outline: none;
 }
 
 .price-val {

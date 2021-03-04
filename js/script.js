@@ -3,6 +3,7 @@ const modal_closure = document.querySelector(".modal-closure");
 const modal_feedback = document.querySelector(".modal--feedback");
 const slider_bullit = document.querySelectorAll(".slider-pager-link");
 const sort_button = document.querySelectorAll(".sort-type-main-link");
+const sort_direction = document.querySelectorAll(".sort-type-direction-link");
 
 address_button.addEventListener("click", function (e) {
   e.preventDefault();
@@ -40,3 +41,16 @@ sort_button.forEach(function (el, i) {
 
   });
 });
+
+sort_direction.forEach(function (el, i) {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".sort-type-direction-link--active").classList.remove("sort-type-direction-link--active");
+    this.classList.add("sort-type-direction-link--active");
+
+  });
+});
+
+
+
+
