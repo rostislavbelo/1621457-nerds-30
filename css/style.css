@@ -25,6 +25,8 @@
   --additional5-gray: rgba(77, 77, 77, 0.12);
   --additional6-gray: #ababab;
   --additional1-black: rgba(0, 0, 0, 0.15);
+  --additional7-gray: #666666;
+  --additional7-gray: #d7dcdf;
 }
 
 /* Global */
@@ -362,11 +364,11 @@
 }
 
 .button-slider-button:hover {
-  background: #e74246;
+  background: var(--middle-red);
 }
 
 .button-slider-button:focus {
-  background: #d7373b;
+  background: var(--dark-red);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   color: rgb(255, 255, 255, 0.3);
 }
@@ -520,11 +522,11 @@
 }
 
 .services-button-sites:hover {
-  background: #e74246;
+  background: var(--middle-red);
 }
 
 .services-button-sites:focus {
-  background: #d7373b;
+  background: var(--dark-red);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   color: rgb(255, 255, 255, 0.3);
 }
@@ -740,60 +742,56 @@
 .projects-container {
   width: 1157px;
   margin: 0 auto;
+  position: relative;
 }
 
 .projects {
+  position: relative;
   width: 1157px;
   list-style-type: none;
   margin-bottom: 78px;
   padding: 0;
   min-height: 180px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  gap: 38px;
   border-top: 2px solid var(--basic-gray);
   border-bottom: 2px solid var(--basic-gray);
 }
 
 .projects-img {
-  padding: 0;
-  margin: 0;
+  position: relative;
   display: flex;
-  width: 270px;
-  min-height: 100px;
+  width: 209px;
+  min-height: 90px;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
-/* .projects-img1 {
+.projects-img1 {
   padding: 0;
-  margin: 0;
-  display: block;
+  margin-left: 27px;
+  margin-top: 19px;
 }
 
 .projects-img2 {
   padding: 0;
-  margin: 0;
-  display: block;
+  margin-left: 38px;
 }
 
 .projects-img3 {
   padding: 0;
-  margin: 0;
-  display: block;
+  margin-left: 47px;
 }
 
 .projects-img4 {
   padding: 0;
-  margin: 0;
-  display: block;
-} */
+  margin-left: 62px;
+  margin-top: 13px;
+}
 
-.projects-img:nth-child(2n)::after,
-.projects-img:nth-child(3n)::after,
-.projects-img:nth-child(4n)::after {
+.projects-img:nth-child(2)::after,
+.projects-img:nth-child(3)::after {
   padding: 0;
   margin: 0;
   content: "";
@@ -801,8 +799,21 @@
   width: 2px;
   height: 52px;
   position: absolute;
-  left: -10px;
-  top: 19px;
+  left: -47px;
+  top: 63px;
+  background: var(--basic-gray);
+}
+
+.projects-img:nth-child(3)::before {
+  padding: 0;
+  margin: 0;
+  content: "";
+  display: block;
+  width: 2px;
+  height: 52px;
+  position: absolute;
+  left: 255px;
+  top: 63px;
   background: var(--basic-gray);
 }
 
@@ -943,20 +954,18 @@
   text-transform: uppercase;
 }
 
-.address-tel, .phone {
+.address-tel,
+.phone {
   text-decoration: none;
   font-size: 16px;
   line-height: 18px;
-  color: #666666;
-
+  color: var(--additional7-gray);
 }
 
 .address-tel {
   margin: 0 0 36px;
   padding: 0;
 }
-
-
 
 .address-detail {
   padding: 0;
@@ -985,11 +994,11 @@
 }
 
 .address-button:hover {
-  background: #e74246;
+  background: var(--middle-red);
 }
 
 .address-button:focus {
-  background: #d7373b;
+  background: var(--dark-red);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   color: rgb(255, 255, 255, 0.3);
 }
@@ -1059,10 +1068,9 @@
   position: absolute;
   top: 16%;
   left: 88%;
-  background: var(--basic-red);
-  opacity: 0.3;
+  background: #FFCDCE; /* (взят пипеткой а был var(--basic-red); opacity: 0.3;) */
   transform: rotate(45deg);
-}
+  }
 
 .modal-closure::before {
   content: "";
@@ -1072,8 +1080,7 @@
   position: absolute;
   top: 16%;
   left: 88%;
-  background: var(--basic-red);
-  opacity: 0.3;
+  background: #FFCDCE; /* (взят пипеткой а был var(--basic-red); opacity: 0.3;) */
   transform: rotate(-45deg);
 }
 
@@ -1085,9 +1092,8 @@
 
 .modal-closure:active::after,
 .modal-closure:active::before {
-  background: var(--basic-red);
-  opacity: 0.1;
-}
+  background: #FFEFEF; /* взят пипеткой а был   background: var(--basic-red)  opacity: 0.1; */
+ }
 
 .appointment-title {
   font-style: normal;
@@ -1189,11 +1195,11 @@
 }
 
 .button-modal:hover {
-  background: #e74246;
+  background: var(--middle-red);
 }
 
 .button-modal:focus {
-  background: #d7373b;
+  background: var(--dark-red);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   color: rgb(255, 255, 255, 0.3);
 }
@@ -1232,11 +1238,11 @@
 }
 
 .filter-block--price {
-  margin-bottom: 51px;
+  margin-bottom: 53px;
 }
 
 .filter-block--grid {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .filter-block--spec {
@@ -1259,11 +1265,11 @@
 }
 
 .filter-block-title--grid {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .filter-block-title--spec {
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
 .price-block {
@@ -1271,7 +1277,7 @@
   height: 79px;
   position: relative;
   border-radius: 2px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .price-scale {
@@ -1796,5 +1802,19 @@
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-/* строки 610 - 622 - (строки 109-117 в html) - разбивка катрочек товаров на 2 колонки.
-Не знаю, допустимо ли так дробить список в угоду сетке    */
+/* Blank.html */
+
+.blank-information {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 150px;
+}
+
+.ads {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+}
