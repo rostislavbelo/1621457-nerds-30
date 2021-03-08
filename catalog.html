@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link href="css/normalize.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.min.css" rel="stylesheet" />
   <link rel="icon" href="favicon.ico" />
   <link rel="icon" href="favicon/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="favicon/180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
 </head>
-
 <body class="page-body">
   <header class="main-header">
     <div class="main-header__container">
@@ -54,7 +52,6 @@
               <a href="#" class="price-handle price-handle--left"></a>
               <a href="#" class="price-handle price-handle--right"></a>
             </div>
-
             <div class="price-val-block">
               <label for="min-price" class="price-val price-min-val">От <input class="price-val-input" name="price-min"
                   id="min-price" type="text" value="0" /></label>
@@ -62,7 +59,6 @@
                   id="max-price" type="text" value="15000" /></label>
             </div>
           </fieldset>
-
           <fieldset class="filter-block filter-block--grid">
             <legend class="filter-block-title filter-block-title--grid">Ceтка:</legend>
             <ul class="grid-type-list">
@@ -90,7 +86,6 @@
                   <em class="custom-checkbox-flap"></em>
                   Слайдер
                 </label>
-
               </li>
               <li class="custom-checkbox specifics-item">
                 <input class="custom-checkbox-input" type="checkbox" name="advantages" id="filter-advantages" />
@@ -148,7 +143,6 @@
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 10L0 0H11" />
                 </svg>
-
               </a>
             </li>
             <li class="sort-type-direction-item">
@@ -184,12 +178,12 @@
           </li>
           <li class="goods-item">
             <em class="goods-decor"></em>
-            <div class="goods-img-container"><img src="./img/Borodinski.jpg" alt="карточка товара" class="goods-img">
+            <div class="goods-img-container"><img src="./img/borodinski.jpg" alt="карточка товара" class="goods-img">
             </div>
             <div class="goods-descr-container">
               <a href="blank.html" class="goods-name">Barbershop</a>
               <p class="goods-text">Сайт салона красоты.<br>Для мужчин, да.</p>
-              <a href="blank.html" href="" class="goods-price">9 900 ₽</a>
+              <a href="blank.html" class="goods-price">9 900 ₽</a>
             </div>
           </li>
           <li class="goods-item">
@@ -231,18 +225,15 @@
           </ul>
           <a class="next-page" href="blank.html">Следующая</a>
         </div>
-
-
       </section>
     </div>
   </main>
-
   <footer class="page-footer main-footer">
     <section class="contacts">
       <iframe class="google-map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6439518471!2d30.322639703219107!3d59.93805005539802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614642542977!5m2!1sru!2sru"
         width="1440" height="416" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-      <img class="picture img-map" src="img\map 1.jpg" width="1440" height="416" alt="Фрагмент карты города" />
+      <img class="picture img-map" src="img/map.jpg" width="1440" height="416" alt="Фрагмент карты города" />
       <h4 class="visually-hidden">Как нас найти</h4>
       <div class="address">
         <p class="address-title">NЁRDS DESIGN STUDIO</p>
@@ -276,7 +267,6 @@
       </div>
     </section>
   </footer>
-
   <section class="modal modal--feedback">
     <h4 class="visually-hidden">Обратная связь</h4>
     <h2 class="appointment-title">Напишите нам</h2>
@@ -299,7 +289,6 @@
     </form>
     <a class="modal-closure" href="#" aria-label="Закрыть форму обратной связи"></a>
   </section>
+  <script src="./js/script.min.js"></script>
 </body>
-<script src="./js/script.js"></script>
-
 </html>
