@@ -159,6 +159,24 @@
   display: none;
   opacity: 0.4;
   transform: rotate(-45deg);
+  z-index: 13;
+}
+
+.custom-checkbox-flap {
+  position: absolute;
+  width: 9px;
+  height: 17px;
+  background: white;
+  left: 17px;
+  top: -2px;
+  display: block;
+  z-index: 11;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-label .custom-checkbox-flap {
+  display: block;
 }
 
 .custom-radio-input:checked + .custom-radio-label::after,
@@ -466,8 +484,6 @@
   list-style: none;
   padding: 0;
   margin-bottom: 155px;
-  /*display: flex;
-  margin-left: -30px;*/
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 42px;
@@ -1039,6 +1055,32 @@
   }
 }
 
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.popup-error {
+  animation: shake 0.6s;
+}
+
 .modal-closure::after,
 .modal-closure::before {
   content: "";
@@ -1113,6 +1155,15 @@
 
 .appointment-input:invalid {
   border-color: var(--middle-red);
+}
+
+.error {
+  border-color: var(--middle-red);
+  color: var(--middle-red);
+}
+
+.error::placeholder {
+  color: var(--middle-red);
 }
 
 .appointment-text {
@@ -1751,8 +1802,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
-
-
 
 /* Blank.html */
 
