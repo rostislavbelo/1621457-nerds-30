@@ -8,7 +8,6 @@ const form = document.querySelector(".appointment-form");
 const name = document.querySelector(".appointment-name");
 const mail = document.querySelector(".appointment-email");
 
-
 address_button.addEventListener("click", function (e) {
   e.preventDefault();
   modal_feedback.classList.add("modal--show");
@@ -45,44 +44,43 @@ slider_bullit.forEach(function (el, i) {
 sort_button.forEach(function (el, i) {
   el.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(".sort-type-main-link--active").classList.remove("sort-type-main-link--active");
+    document
+      .querySelector(".sort-type-main-link--active")
+      .classList.remove("sort-type-main-link--active");
     this.classList.add("sort-type-main-link--active");
-
   });
 });
 
 sort_direction.forEach(function (el, i) {
   el.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(".sort-type-direction-link--active").classList.remove("sort-type-direction-link--active");
+    document
+      .querySelector(".sort-type-direction-link--active")
+      .classList.remove("sort-type-direction-link--active");
     this.classList.add("sort-type-direction-link--active");
-
   });
 });
 
 name.required = false;
 mail.required = false;
 
-form.addEventListener("submit", function(e){
-  if (!name.value || !mail.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value)) {
+form.addEventListener("submit", function (e) {
+  if (
+    !name.value ||
+    !mail.value ||
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value)
+  ) {
     e.preventDefault();
-    modal_feedback.classList.remove('popup-error');
+    modal_feedback.classList.remove("popup-error");
     modal_feedback.offsetWidth = modal_feedback.offsetWidth;
-    modal_feedback.classList.add('popup-error');
+    modal_feedback.classList.add("popup-error");
 
     if (!name.value) {
       name.classList.add("error");
-
     }
-    console.log(mail.value)
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value)){
+    console.log(mail.value);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value)) {
       mail.classList.add("error");
     }
-
   }
-
 });
-
-
-
-
