@@ -205,12 +205,36 @@
   opacity: 1;
 }
 
+.custom-checkbox-input:disabled + .custom-checkbox-label::before {
+  opacity: 0.1;
+}
+
+.custom-checkbox-input:disabled + .custom-checkbox-label::after {
+  opacity: 0.1;
+}
+
+.custom-checkbox-input:disabled + .custom-checkbox-label {
+  color: rgba(40, 49, 54, 0.3);
+ }
+
+ .custom-radio-input:disabled + .custom-radio-label::before {
+  opacity: 0.1;
+}
+
+.custom-radio-input:disabled + .custom-radio-label::after {
+  opacity: 0.1;
+}
+
+.custom-radio-input:disabled + .custom-radio-label {
+  color: rgba(40, 49, 54, 0.3);
+ }
+
 /* Main navigation */
 
 .main-header {
   position: relative;
   background-color: var(--basic-gray);
-  padding-top: 74px;
+  padding-top: 85px;
   padding-bottom: 3px;
   margin: 0;
 }
@@ -285,7 +309,7 @@
   height: 2px;
   position: absolute;
   left: 0;
-  top: 40px;
+  top: 37px;
   background: var(--basic-red);
 }
 
@@ -854,7 +878,7 @@
 .social {
   display: grid;
   grid-template-columns: 33% auto;
-  gap: 20px;
+  gap: 17px;
   width: 1157px;
   margin: 0 auto 50px;
 }
@@ -964,9 +988,10 @@
 
 .address-detail {
   padding: 0;
-  margin-bottom: 19px;
+  margin-bottom: 17px;
   font-size: 16px;
   line-height: 18px;
+  font-style: normal;
   color: var(--additional2-gray);
 }
 
@@ -1236,7 +1261,7 @@
   line-height: 55px;
   background-color: var(--basic-gray);
   min-height: 163px;
-  margin: 0 0 55px;
+  margin: 0 0 57px;
   padding: 0;
   text-align: center;
 }
@@ -1618,11 +1643,11 @@
 .goods-descr-container {
   position: absolute;
   width: 360px;
-  height: 231px;
+  min-height: 231px;
   bottom: 0;
   left: 0;
   background: var(--basic-gray);
-  padding: 30px 20px;
+  padding: 30px 65px;
   text-align: center;
   z-index: 10;
   width: 100%;
@@ -1666,7 +1691,7 @@
 }
 
 .goods-text {
-  padding: 8px 0 35px;
+  padding: 12px 0 34px;
   margin: 0;
   font-style: normal;
   font-weight: normal;
