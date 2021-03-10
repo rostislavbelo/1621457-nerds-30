@@ -274,7 +274,6 @@
   list-style: none;
   padding: 0;
   margin-top: -9px;
-  margin-left: 2px;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -316,11 +315,11 @@
 .cart {
   position: absolute;
   display: block;
-  right: -3px;
+  right: -2px;
   top: 0;
-  padding-left: 37px;
+  padding-left: 41px;
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 30px;
   color: var(--basic-black);
@@ -378,7 +377,7 @@
 
 .slider-text-big {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 55px;
   line-height: 56px;
   padding-bottom: 26px;
@@ -390,6 +389,7 @@
 }
 
 .slider-text-small {
+ width: 450px;               /* добавил ширину */
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -635,9 +635,9 @@
 }
 
 .about-who {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 45px;
-  line-height: 46px;
+  line-height: 45px;
   margin: 0;
   padding-bottom: 17px;
 }
@@ -982,7 +982,7 @@
 }
 
 .address-tel {
-  margin: 0 0 40px;
+  margin: 0 0 39px;
   padding: 0;
 }
 
@@ -1647,7 +1647,7 @@
   bottom: 0;
   left: 0;
   background: var(--basic-gray);
-  padding: 30px 65px;
+  padding: 27px 65px;
   text-align: center;
   z-index: 10;
   width: 100%;
@@ -1691,7 +1691,7 @@
 }
 
 .goods-text {
-  padding: 12px 0 34px;
+  padding: 12px 0 33px;
   margin: 0;
   font-style: normal;
   font-weight: normal;

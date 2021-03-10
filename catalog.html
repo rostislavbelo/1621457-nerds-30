@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Нёрдс</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="css/normalize..min.css" rel="stylesheet" />
-  <link href="css/style.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap;700&display=swap" rel="stylesheet" />
+  <link href="css/normalize.min.css" rel="stylesheet" /> <!-- убрал лишнюю точку -->
+  <link href="css/style.css" rel="stylesheet" />
   <link rel="icon" href="favicon.ico" />
   <link rel="icon" href="favicon/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="favicon/180.png" />
@@ -49,8 +49,8 @@
               <div class="price-scale">
                 <div class="price-range"></div>
               </div>
-              <a href="#" class="price-handle price-handle--left"></a>
-              <a href="#" class="price-handle price-handle--right"></a>
+              <a href="#" class="price-handle price-handle--left" aria-label="Установить минимальную стоимость"></a> <!-- добавил aria-label -->
+              <a href="#" class="price-handle price-handle--right" aria-label="Установить максимальную стоимость"></a> <!-- добавил aria-label -->
             </div>
             <div class="price-val-block">
               <label for="min-price" class="price-val price-min-val">От <input class="price-val-input" name="price-min"
