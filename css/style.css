@@ -215,9 +215,9 @@
 
 .custom-checkbox-input:disabled + .custom-checkbox-label {
   color: rgba(40, 49, 54, 0.3);
- }
+}
 
- .custom-radio-input:disabled + .custom-radio-label::before {
+.custom-radio-input:disabled + .custom-radio-label::before {
   opacity: 0.1;
 }
 
@@ -227,7 +227,7 @@
 
 .custom-radio-input:disabled + .custom-radio-label {
   color: rgba(40, 49, 54, 0.3);
- }
+}
 
 /* Main navigation */
 
@@ -357,7 +357,7 @@
   min-height: 352px;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 83px;
+  margin-bottom: 79px;
 }
 
 .slider {
@@ -369,6 +369,7 @@
 .slider-screen {
   display: none;
   position: relative;
+  padding-bottom: 80px;
 }
 
 .slider-screen--active {
@@ -389,7 +390,7 @@
 }
 
 .slider-text-small {
- width: 450px;               /* добавил ширину */
+  width: 450px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
